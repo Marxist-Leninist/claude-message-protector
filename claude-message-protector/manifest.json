@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "Claude Message Protector",
+  "version": "1.0.0",
+  "description": "Prevents message disappearing bug on claude.ai during heavy tool use. Fixes Wiggle 404 error handling.",
+  "permissions": [],
+  "host_permissions": [
+    "https://claude.ai/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://claude.ai/*"],
+      "js": ["content.js"],
+      "run_at": "document_start"
+    }
+  ],
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  }
+}
